@@ -22,9 +22,18 @@ SELECT
     COUNT(DISTINCT CONCAT(store_id,'-',product_id,'-',date)) AS unique_rows
 FROM sales;
 
--- Sample duplicate validation
+-- Sample duplicate validation (performance-safe)
 SELECT 
     COUNT(*) AS sample_rows,
     COUNT(DISTINCT CONCAT(store_id,'-',product_id,'-',date)) AS sample_unique
 FROM sales
 WHERE date BETWEEN '2018-01-01' AND '2018-01-31';
+
+-- Null checks on critical fields
+SELECT COUNT(*) AS null_price_rows
+FROM sales
+WHERE price IS NULL;
+
+SELECT COUNT(*) AS null_sales_rows
+FROM sales
+WHERE sales IS NULL;
