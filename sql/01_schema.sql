@@ -1,0 +1,24 @@
+-- Sales fact table schema
+
+CREATE TABLE sales (
+    store_id VARCHAR(10),
+    product_id VARCHAR(10),
+    date DATE,
+    sales INT,
+    revenue DECIMAL(10,2),
+    stock INT,
+    price_raw VARCHAR(20),
+    promo_type_1 VARCHAR(50),
+    promo_bin_1 VARCHAR(50),
+    promo_type_2 VARCHAR(50),
+    promo_bin_2 VARCHAR(50),
+    promo_discount_2 VARCHAR(50),
+    promo_discount_type_2 VARCHAR(50),
+    train_or_test VARCHAR(10),
+    price DECIMAL(10,2)
+);
+
+-- Indexes for performance
+CREATE INDEX idx_sales_date ON sales(date);
+CREATE INDEX idx_sales_store_product_date 
+ON sales(store_id, product_id, date);
