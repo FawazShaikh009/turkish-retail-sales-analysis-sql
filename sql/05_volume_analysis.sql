@@ -1,15 +1,15 @@
 /*
 Purpose:
-  Analyze monthly pricing trends to understand revenue growth drivers.
+  Analyze monthly sales volume trends to understand demand
+  seasonality and unit movement over time.
 
 Dataset:
   Turkish Retail Sales (2017–2019), ~19.4M rows
 
 Notes:
-  Queries may take longer due to dataset size.
+  Query restricted to 2018–2019 for performance efficiency.
 */
 
--- Monthly unit volume analysis
 SELECT 
     DATE_FORMAT(date, '%Y-%m') AS month,
     SUM(sales) AS total_units
