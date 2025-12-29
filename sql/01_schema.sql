@@ -8,7 +8,10 @@ Dataset:
 Notes:
   Queries may take longer due to dataset size.
 */
+
 -- Sales fact table schema
+-- Data was imported via batch Python script due to MySQL GUI limitations
+-- Dataset size: ~19.4M rows
 
 CREATE TABLE sales (
     store_id VARCHAR(10),
