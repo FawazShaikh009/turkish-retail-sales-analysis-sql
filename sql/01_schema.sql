@@ -1,12 +1,12 @@
 /*
 Purpose:
-  Analyze monthly pricing trends to understand revenue growth drivers.
+  Define schema and indexing strategy for retail sales fact table.
 
 Dataset:
   Turkish Retail Sales (2017–2019), ~19.4M rows
 
 Notes:
-  Queries may take longer due to dataset size.
+  Data imported via batch Python script due to MySQL GUI limitations.
 */
 
 -- Sales fact table schema
