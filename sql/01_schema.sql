@@ -1,3 +1,13 @@
+/*
+Purpose:
+  Analyze monthly pricing trends to understand revenue growth drivers.
+
+Dataset:
+  Turkish Retail Sales (2017–2019), ~19.4M rows
+
+Notes:
+  Queries may take longer due to dataset size.
+*/
 -- Sales fact table schema
 
 CREATE TABLE sales (
