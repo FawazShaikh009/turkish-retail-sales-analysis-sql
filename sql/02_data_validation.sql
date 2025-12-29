@@ -1,12 +1,13 @@
 /*
 Purpose:
-  Analyze monthly pricing trends to understand revenue growth drivers.
+  Validate data integrity, date coverage, and logical uniqueness
+  before performing analytical queries.
 
 Dataset:
   Turkish Retail Sales (2017–2019), ~19.4M rows
 
 Notes:
-  Queries may take longer due to dataset size.
+  Full-table duplicate checks may be expensive due to dataset size.
 */
 
 -- Date range validation
